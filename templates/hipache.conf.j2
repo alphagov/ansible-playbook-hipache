@@ -2,10 +2,15 @@
     "server": {
         "debug": true,
         "accessLog": "/var/log/hipache/access.log",
+{% if hipache_listen_address %}
+        "address": ["{{ hipache_listen_address }}"],
+{% endif %}
 {% if ansible_all_ipv6_addresses == [] %}
         "address6": [],
+{% elif hipache_listen_address6 %}
+        "address6": ["{{ hipache_listen_address6 }}"],
 {% endif %}
-        "port": 80,
+        "port": {{ hipache_listen_port }},
         "workers": 5,
         "maxSockets": 100,
         "deadBackendTTL": 30,
