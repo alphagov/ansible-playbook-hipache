@@ -16,6 +16,8 @@ Role Variables
 
 `redis_port` port that the redis instance listens on.
 
+`node_hipache_version` version of node-hipache that is to be installed. Defaults to `latest`
+
 Dependencies
 ------------
 
