@@ -9,7 +9,7 @@
   with_items:
     - python-software-properties
     - nodejs
-    - node-hipache
+    - "{% if node_hipache_version is defined %}node-hipache={{ node_hipache_version }}{% else %}node-hipache{% endif %}"
 
 - name: copy hipache upstart script
   copy: src=hipache.upstart dest=/etc/init/hipache.conf owner=root group=root mode=0644
