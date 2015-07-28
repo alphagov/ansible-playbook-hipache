@@ -6,3 +6,5 @@ redis_port: 6379
 hipache_listen_port: 80
 hipache_listen_address:
 hipache_listen_address6:
+
+tsuru_repo: 'ppa:tsuru/ppa'
