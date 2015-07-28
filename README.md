@@ -18,6 +18,8 @@ Role Variables
 
 `node_hipache_version` version of node-hipache that is to be installed. Defaults to `latest`
 
+`tsuru_repo` repo argument for Ansible's [`apt_repository`](http://docs.ansible.com/ansible/apt_repository_module.html) module, defaults to `ppa:tsuru/ppa`
+
 Dependencies
 ------------
 
